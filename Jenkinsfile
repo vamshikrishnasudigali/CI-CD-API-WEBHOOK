@@ -9,11 +9,6 @@ pipeline {
     }*/
 
     stages {
-        stage('Clone the Code') {
-            steps {
-                git 'https://github.com/futuretechdevops/hello-world.git'
-            }
-        }
         stage('MVN Build and Publish the Unit Test Results') {
             steps {
                 sh 'mvn clean install'
