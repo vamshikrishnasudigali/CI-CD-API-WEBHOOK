@@ -138,7 +138,7 @@ pipeline {
                         sh 'docker run -d --name tomcat -p 8090:8090 $STABLE_IMAGE'
                         sh 'echo "Started tomcat container with STABLE_IMAGE: $STABLE_IMAGE"'
                         currentBuild.result = 'FAILED'
-                        urrentStage.result = 'FAILED'
+                        currentStage.result = 'FAILED'
                         sh 'exit 1'
                     }
                     finally {
