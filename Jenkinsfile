@@ -62,7 +62,7 @@ pipeline {
                     rtServer (
                         id: "jfrog", 
                         url: "http://10.10.0.5:8082",
-                        credentialsId: "4fe16cb0-df33-4b63-a117-68c127eacd40"
+                        credentialsId: "JFrog-Upload-User-Credentials"
                     )
                     rtUpload (
                         serverId: 'jfrog',
