@@ -28,9 +28,9 @@ pipeline {
             }
             steps {
                 withSonarQubeEnv('SonarQube-Server-CE-9.8') {
-                    sh "${scannerHome}/bin/sonar-scanner \
-                    -D sonar.projectKey=cicd-demo \
-                    -D sonar.exclusions=vendor/**,resources/**,**/*.java"
+                    sh "${scannerHome}/bin/sonar:sonar \
+                    -Dsonar.host.url=http://13.127.201.16:9000 \
+                    -Dsonar.login=019a98453e49de223698c74fbeb9addaf83814db
                 }
             }
         }
