@@ -28,7 +28,7 @@ pipeline {
             }
             steps {
                 withSonarQubeEnv('SonarQube-Server-CE-9.8') {
-                    sh "${scannerHome}/bin/sonar:sonar \
+                    sh "${scannerHome}/opt/sonarqube:sonar \
                     -Dsonar.host.url=http://43.204.214.16/:9000 \
                     -Dsonar.login=019a98453e49de223698c74fbeb9addaf83814db"
                 }
